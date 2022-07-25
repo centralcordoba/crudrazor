@@ -29,8 +29,23 @@ namespace searchRazor.Pages.Cars
 
             if (!string.IsNullOrEmpty(SearchString))
             {
-                cars = cars.Where(s => s.Price > Convert.ToDecimal(SearchString));
+                bool validationPrice = false;
+                cars = cars.Where(s => s.Make.Contains(SearchString));
                 Car = await cars.ToListAsync();
+
+                foreach (var item in cars)
+                {
+                    if (item.Price > 5000)
+                    {
+                        validationPrice = true;
+                    }
+                }
+                if (validationPrice)
+                {
+                    ViewData["Message"] = string.Format("We found cars older than 5000.00$", null, DateTime.Now.ToString());
+
+                }
+
             }
             else
             {

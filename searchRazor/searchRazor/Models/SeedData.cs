@@ -30,8 +30,8 @@ namespace searchRazor.Models
                 context.Cars.AddRange(
                     new Car
                     {
-                        Model = "Tesla",
-                        Make = "M3",
+                        Model = "R8",
+                        Make = "Audi",
                         Color = "Black",
                         Year = "2019",
                         Price = 5500
@@ -39,8 +39,8 @@ namespace searchRazor.Models
 
                     new Car
                     {
-                        Model = "Mercedes Benz",
-                        Make = "C250",
+                        Model = "c250",
+                        Make = "Mercedes Benz",
                         Color = "White",
                         Year = "2020",
                         Price = 5500
@@ -48,8 +48,8 @@ namespace searchRazor.Models
 
                     new Car
                     {
-                        Model = "Bmw",
-                        Make = "b1",
+                        Model = "x6",
+                        Make = "Bmw",
                         Color = "Red",
                         Year = "2015",
                         Price = 4000
@@ -57,11 +57,19 @@ namespace searchRazor.Models
 
                     new Car
                     {
-                        Model = "Audi",
-                        Make = "A3",
+                        Model = "3",
+                        Make = "Tesla",
                         Color = "Green",
                         Year = "2010",
                         Price = 3000
+                    },
+                    new Car
+                    {
+                        Model = "911",
+                        Make = "Porsche",
+                        Color = "Red",
+                        Year = "2015",
+                        Price = 4000
                     }
                 );
                 context.SaveChanges();

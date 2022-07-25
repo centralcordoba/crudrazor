@@ -12,10 +12,18 @@
 </p>
 <form>
     <p>
-        Price: <input type="number" asp-for="SearchString" />
+        Make: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message"]");
+            };
+    </script>
+}
 
 <table class="table">
     <thead>
